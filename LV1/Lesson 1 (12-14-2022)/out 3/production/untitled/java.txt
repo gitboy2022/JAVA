@@ -1,0 +1,19 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+class Main {
+    Main() {
+    }
+
+    public static void findPrevious(int number) {
+        int remainder = number % 10;
+        int multiple10 = number - remainder;
+        System.out.print(multiple10);
+    }
+
+    public static void main(String[] args) {
+        findPrevious(123);
+    }
+}

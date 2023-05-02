@@ -1,0 +1,53 @@
+class GradingSystem 
+{
+    public static void main(String args[]) 
+    {
+        System.out.println(assignGrades(75));
+    }
+
+    // Function assigning the grades
+    public static char assignGrades(double score) 
+    {
+        if (score == 100) 
+        {
+            System.out.println("Superb");
+            return 'A';
+        }
+
+        else if (score >= 90) 
+        {
+            System.out.println("Excelent");
+            return 'A';
+        }
+
+        else if (score >= 80) 
+        {
+            System.out.println("Very Good");
+            return 'B';
+        }
+
+        else if (score >= 70) 
+        {
+            System.out.println("Good");
+            return 'C';
+        }
+
+        else if (score >= 60) 
+        {
+            System.out.println("Work Hard");
+            return 'D';
+        }
+
+        else 
+        {
+            System.out.println("Fail");
+            return 'F';
+        }
+    }
+}
+
+class Main {
+  public static void main(String[] args) {
+    GradingSystem.main(args);
+  }
+}

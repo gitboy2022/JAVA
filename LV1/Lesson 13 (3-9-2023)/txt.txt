@@ -1,0 +1,58 @@
+class ATMmachine
+{
+    public static void main (String args[])
+    {
+        ATM obj = new ATM("0-2281291291-21", "29wjsw2", 249000);
+
+        // Withdrawing the money
+        System.out.println( obj.withdrawal("29wjsw2", "34000"));
+    }
+}
+
+class ATM   // Header of the class
+{
+    //Private fields
+    private String accNo;
+    private String accPassword;
+    private double balance;
+
+    // The parameterized constructor
+    public ATM(String AccNo, String Password, double Balance) 
+    {
+        accNo = AccNo;
+        accPassword = Password;
+        balance = Balance;
+    }
+
+    // Write your function withdrawal here
+    public String withdrawal(String password, String cash) 
+    {
+        if (accPassword.equals(password))                  // First checking the passowrd
+        {   
+            /* Step 1: If cash is null; no further checks and return error message
+               Step 2: If cash doesn't have all numbers; no further checks and return error message
+               Step 3: If cash is greater than balance; no further checks and return error message
+               Step 4: If cash is greater than 50,000; return error message
+            */
+            if (cash != null && cash.matches("[-+]?\\d*\\.?\\d+") && Double.parseDouble(cash) <= this.balance && Double.parseDouble(cash) <= 50000) 
+            {
+                balance -= Double.parseDouble(cash);    // Deducting balance
+                return "Withdrawal is successful. Your current balance is $" + balance;
+            }
+            else    // error message
+            {  
+                return "Please enter the correct amount.";
+            }
+        }
+        else       // If password wasn't correct
+        {  
+            return "Wrong Password!";
+        }
+    }     
+}
+
+class Main {
+  public static void main(String[] args) {
+    ATMmachine.main(args);
+  }
+}

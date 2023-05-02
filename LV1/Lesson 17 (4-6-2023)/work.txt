@@ -1,0 +1,91 @@
+import java.util.Scanner;  // import the scanner class
+
+public class WaterBottle{
+    private double price;
+    private String description;
+    private int quantity;
+    private double cost;
+
+    // Write class constructor here
+    public void WaterBottles(double p, String d, int q, double c){
+        price = p;
+        description = d;
+        quantity = q;
+        cost = c;
+    }
+
+    // Write accessor and mutator methods here
+    public double GetPrice(){
+        return price;
+    }
+
+    public void SetPrice(double newPrice){
+        price = newPrice;
+    }
+
+    public String GetDescription(){
+        return description;
+    }
+
+    public void SetDescription(String newDescription){
+        description = newDescription;
+    }
+
+    public int GetQuantity(){
+        return quantity;
+    }
+
+    public void SetQuantity(int newQuantity){
+        quantity = newQuantity;
+    }
+
+    public double GetCost(){
+        return cost;
+    }
+
+    public void SetCost(double newCost){
+        cost = newCost;
+    }
+}
+
+class Code {
+    public static void main(String[] args) {
+        WaterBottle poland40spring = new WaterBottle();
+        Scanner myObj = new Scanner(System.in);
+        poland40spring.WaterBottles(0, "", 0, 0);
+        String Name = "Poland Spring 40 Pack";
+        System.out.println("Name: " + Name);
+        poland40spring.SetPrice(60); // set price
+        poland40spring.SetCost(1.2); // set cost
+        poland40spring.SetDescription("40 pack water bottles"); // set description
+        poland40spring.SetQuantity(1000); // set quantity
+        System.out.println("Price: " + poland40spring.GetPrice()); // get price
+        System.out.println("Description: " + poland40spring.GetDescription()); // get description
+        System.out.println("Amount Left: " + poland40spring.GetQuantity()); // get quantity
+        System.out.println("Type (order) to order! ");
+        String output = myObj.nextLine();  // read user input
+        if (output.equals("order")) {
+            System.out.println("How much do you want! ");
+            String output2 = myObj.nextLine();  // read user input
+            int i = Integer.parseInt(output2);
+            if (i > 1000) {
+                System.out.println("You can't do that! ");
+                System.exit(0);
+            } else if (i < 1) {
+                System.out.println("You can't do that! ");
+                System.exit(0);
+            }
+            System.out.println("You Have Ordered: " + Name + " at amount " + i);
+        } else if (output.equals("secret")) {
+            System.out.println("Password: ");
+            String output3 = myObj.nextLine();
+            if (output3.equals("qwerty")) {
+                System.out.println("Cost: " + poland40spring.GetCost()); // get quantity
+            }
+        }
+        else {
+            System.out.println("You can't do that! ");
+            System.exit(0);
+        }
+    }
+}

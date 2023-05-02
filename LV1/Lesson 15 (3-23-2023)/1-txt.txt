@@ -1,0 +1,41 @@
+class CarParking 
+{
+    public static void main(String args[]) 
+    {
+         robot(10, 10, 19);
+    }
+
+    public static void robot(int width, int length, int cars)
+    {
+        int counter = 0;                            // Number of parked cars
+        for (int i = 0; i < length; i++)
+        {
+            for (int j = 0; j < width; j++)         // Filling row-wise
+            {
+                if (j % 4 == 0)                     // Leaving three columns 
+                {
+                    if (counter < cars)            // If any car left
+                    {
+                         System.out.print("🚗");    // Parking the car
+                         counter++;
+                    }
+                    else                            // No car left
+                    {
+                        System.out.print("🚫");     // Marking space as available
+                    }
+                }        
+                else                               // distance less than 3 meters
+                {
+                    System.out.print(" ");         // Adding the space
+                }                 
+            }
+            System.out.print("\n");                // Row completed, move to next row
+        }
+    }
+}
+
+class Main {
+  public static void main(String[] args) {
+    CarParking.main(args);
+  }
+}

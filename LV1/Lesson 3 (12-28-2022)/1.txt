@@ -1,0 +1,17 @@
+class Main {
+  public static void main(String args[]) 
+    {
+        int x = 2;                      // x = 2
+        int y = 3;                      // y = 3,  x = 2
+        double z = 5;                   // z = 5.0, y = 3, x = 2
+
+        x *= y;                         // z = 5.0, y = 3, x = 2*3 = 6
+        y = x + y + (int) z;            // z = 5.0, y = 6+3+5 = 14, x = 6
+        z = x + y + y / z;              // z = 6+14+(14/5.0) = 22.8, y = 14, x = 6
+        y++;                            // z = 22.8, y = 15, x = 6
+        x--;                            // z = 22.8, y = 15, x = 5
+        x = (int) z + y * x / y % x;    // x = 22 + ((15*5) / 15)) % 5 = 22 
+        
+        System.out.println(x);
+    }
+}

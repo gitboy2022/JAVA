@@ -1,0 +1,19 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+class Main {
+    Main() {
+    }
+
+    public static void calculateF(double m1, double m2, double r) {
+        double G = 6.674E-11;
+        double Fg = 6.674E-11 * m1 * m2 / (r * r);
+        System.out.print(Fg);
+    }
+
+    public static void main(String[] args) {
+        calculateF(5.9E24, 1.989E30, 1.52E11);
+    }
+}

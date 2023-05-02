@@ -1,0 +1,42 @@
+class Palindrome 
+{
+    public static void main(String args[]) 
+    {
+        System.out.println( checkPalindrome("madam"));
+    }
+
+    public static boolean checkPalindrome(String str)
+    {
+        if (str.length() == 0)
+        {
+            return true;
+        }
+        else
+        {
+            String reversedString = "";
+            String currLetter;
+
+            for(int i=0; i < str.length(); i++) 
+            {
+                currLetter = str.substring(i,i+1);
+                // add the letter at index i to what's already reversed.
+                reversedString = currLetter + reversedString;
+            }
+
+            if(str.equals(reversedString))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Palindrome.main(args);
+  }
+}

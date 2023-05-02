@@ -1,0 +1,46 @@
+public class Game    // Header of the class
+{
+    // Private instances
+    private String name;
+    private int levels;
+    private int scorePerLevel;
+
+    // Parameterized constructors
+    public Game(String name, int scorePerLevel, int levels)
+    {
+        this.name = name;
+        this.scorePerLevel = scorePerLevel;
+        this.levels = levels;
+    }
+   
+    // Return total number of levels
+    public int getTotalLevels()
+    {
+        return levels;
+    }
+
+    // Updating the game information - overloaded methods
+
+    public void updateGame(String name)
+    {
+        this.name = name;
+    }
+
+    public void updateGame(int scorePerLevel)
+    {
+        this.scorePerLevel = scorePerLevel;
+    }
+
+    public void updateGame(String name, int scorePerLevel)
+    {
+        this.name = name;
+        this.scorePerLevel = scorePerLevel;
+    }
+
+    // Getting maximum score per level
+    public int getScorePerLevel()
+    {
+        return scorePerLevel;
+    }
+}
+

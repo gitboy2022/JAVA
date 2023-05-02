@@ -1,0 +1,23 @@
+class RunEncryption 
+{
+    public static void main(String args[]) 
+    {
+        // Encrypting a String
+        System.out.println(encrypt("hefOP830nskdd0qSW uIm", '0', '.', "tuy83AB9"));    
+    }
+
+    // Method to encrypt the string
+    public static String encrypt(String stringToBeEncrypted, char oldChar, char newChar, String extraString)
+    {
+        String str = stringToBeEncrypted.toLowerCase();
+        String update = str.substring(0, str.length()/2) + extraString + str.substring(str.length()/2);
+        return update.replace(oldChar, newChar);
+    }
+}
+
+class Main {
+  public static void main(String[] args) {
+    RunEncryption.main(args);
+  }
+}
+

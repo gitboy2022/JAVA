@@ -1,0 +1,19 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+class Main {
+    Main() {
+    }
+
+    public static void findF(int V, int E) {
+        int F = false;
+        int F = 2 - V + E;
+        System.out.print(F);
+    }
+
+    public static void main(String[] args) {
+        findF(8, 12);
+    }
+}

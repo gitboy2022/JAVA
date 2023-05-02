@@ -1,0 +1,27 @@
+class VectorVisualization 
+{
+    public static void main(String args[]) 
+    {
+        System.out.println("X-component: " + getXcomp(5, 45.0));
+        
+        System.out.println("Y-component: " + getYcomp(5, 45.0));
+    }
+
+    // Method to find x componnent
+    public static Double getXcomp(Integer magnitude, Double direction)
+    {
+        return magnitude * Math.cos(Math.toRadians(direction));
+    }
+
+    // Method to find y componnent
+    public static Double getYcomp(Integer magnitude, Double direction)
+    {
+        return magnitude * Math.sin(Math.toRadians(direction));
+    }
+}
+
+class Main {
+  public static void main(String[] args) {
+    VectorVisualization.main(args);
+  }
+}

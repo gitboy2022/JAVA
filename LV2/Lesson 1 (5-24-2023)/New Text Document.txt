@@ -1,7 +1,7 @@
 public class App {
     public static void main(String[] Args) {
         App Max = new App(); // ready app
-        Max.Max(); //
+        Max.Max(); // run app
     }
     void Max() {
         int[] marks = {90, 80, 85, 90, 95};

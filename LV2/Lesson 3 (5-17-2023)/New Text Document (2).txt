@@ -1,0 +1,29 @@
+import java.util.ArrayList; // import the ArrayList class
+
+public class App {
+    
+    ArrayList<String> list = new ArrayList<>(); // Create an ArrayList object
+    
+    ArrayList<String> revlist = new ArrayList<>(); // Create an ArrayList object
+    
+    boolean setrevlist() {
+        for (int i = list.size() - 1; i >= 0; i--) {
+            // Append the elements in reverse order
+            revlist.add(list.get(i));
+        }
+        return list.equals(revlist);
+    }
+    
+    public static void main(String[]args) {
+        App Java = new App();
+        Java.list.add("m");
+        Java.list.add("a");
+        Java.list.add("d");
+        Java.list.add("a");
+        Java.list.add("m");
+        System.out.println(Java.setrevlist());
+        // debug code
+        System.out.println(Java.list);
+        System.out.println(Java.revlist);
+    }
+}

@@ -1,0 +1,18 @@
+public class Saving extends Account
+{
+    private double interestPercentage;
+
+    public Saving(String accNo, double balance, double interestPercentage)
+    {
+        super(accNo, balance);
+        this.interestPercentage = interestPercentage;
+    }
+
+    public void interestEarned(double amount)
+    {
+        if (amount <= 100)
+            System.out.println(amount * (interestPercentage/100));
+        else
+             System.out.println("Amount no more than $100 is allowed.");
+    }
+}

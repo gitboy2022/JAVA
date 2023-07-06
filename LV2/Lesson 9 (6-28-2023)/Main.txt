@@ -1,0 +1,10 @@
+class Main {
+  public static void main(String args[])
+    {
+        Saving acc = new Saving("378383-8399382-ac-2221", 450000, 5);
+        
+        acc.withdrawal(23000);      // call to superclass
+        acc.interestEarned(110);    // call to subclass
+        acc.deposit(100);           // call to superclass
+    }
+}

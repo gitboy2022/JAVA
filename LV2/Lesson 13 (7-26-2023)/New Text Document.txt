@@ -1,0 +1,38 @@
+class BinarySearch
+{
+    public static int search(int[] array, int left, int right, int value)
+    {
+        if(right >= left)
+        {
+            int middle = (left + right)/2;
+
+            if (array[middle] == value)     // second base case
+                return middle;
+
+            else if(array[middle] > value)  // first recursive case
+                return search(array, left, middle-1, value);
+
+            else                            // second recursive case
+                return search(array, middle+1, right, value);
+        }
+        else                               // first base case
+            return -1;
+    }
+
+    public static int binarySearch(int[]array, int value)
+    {
+        return search(array, 0, array.length-1, value);    // calling recursive method
+    }
+
+    public static void main(String args[]) 
+    {
+        int[] array = {1, 2, 3, 4, 5, 6};
+        System.out.println( binarySearch(array, 5) );
+    }
+}
+
+class Main {
+  public static void main(String[] args) {
+    BinarySearch.main(args);
+  }
+}

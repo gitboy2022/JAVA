@@ -1,25 +1,20 @@
-class Index
+class AddNumbers
 {
     public static void main(String args[])
     {
-      int[] a = {10, 20, 30 ,40};
-      System.out.println(search(20, a ));
+      int a = 20;
+      int b = 40;
+
+      System.out.println(add(a, b));
     }
     
-    public static int search(int n, int[] list) {
-      int index = -1;
-      for (int i = 0; i < list.length; i++){
-        if (list[i] == n){
-          index = i;
-          break;
-        }
-      }
-      return index;
+    public static int add(int a, int b){
+      return a + b;
     }
 }
 
 class Main {
   public static void main(String[] args) {
-    Index.main(args);
+    AddNumbers.main(args);
   }
 }

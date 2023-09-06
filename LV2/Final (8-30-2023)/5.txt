@@ -1,0 +1,28 @@
+interface IVehicle
+{
+    void getMileage();
+
+    void setMileage(double m);
+    
+}
+
+class Car implements IVehicle{
+  private double mileage = 0;
+
+  public void getMileage(){
+    System.out.println(mileage);
+  }
+
+  public void setMileage(double m){
+    mileage = m;
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Car car = new Car();
+    car.getMileage();
+    car.setMileage(4000.5);
+    car.getMileage();
+  }
+}

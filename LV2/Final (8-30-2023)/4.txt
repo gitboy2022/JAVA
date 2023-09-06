@@ -1,0 +1,23 @@
+class Natural
+{
+    public void main(String args[])
+    {
+        int n = 20;
+      
+        System.out.println(sum(n));  
+    }
+    
+    public int sum(int n){
+        if (n != 0)
+          return n + sum(n - 1);
+        else
+          return n;
+    }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Natural natural = new Natural();
+    natural.main(args);
+  }
+}

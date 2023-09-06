@@ -1,0 +1,37 @@
+class Fruit
+{
+    protected int quantity =5;
+
+    public void getQuantity(){
+      System.out.println(quantity + " fruit" );
+    }
+
+}
+
+class Apple extends Fruit{
+    
+    @Override
+    public void getQuantity(){
+      System.out.println(quantity + " apple" );
+    }
+}
+
+class Orange extends Fruit{
+    @Override
+    public void getQuantity(){
+      System.out.println(quantity + " orange" );
+    }
+}
+
+
+class Main {
+  public static void main(String[] args) {
+    Fruit fruit = new Fruit();
+    Apple apple = new Apple();
+    Orange orange = new Orange();
+    
+    fruit.getQuantity();
+    apple.getQuantity();
+    orange.getQuantity();
+  }
+}
